@@ -1,0 +1,29 @@
+# define websocket constant,opcode
+OPCODE_TEXT = 0x01
+OPCODE_BINARY = 0x02
+OPCODE_CONTINUE = 0x00
+OPCODE_CLOSE = 0x08
+OPCODE_PING = 0x09
+OPCODE_PONG = 0x0A
+OPCODE_FUTURE = 0x0B
+OPCODE_NO_CONTROL = 0x03
+
+# support websocket version
+VERSION = ('13', '8', '7')
+
+# append websocket key
+APPEND_ID = '258EAFA5-E914-47DA-95CA-C5AB0DC85B11'
+
+# all mask of opcode,fin,length
+FIN_MASK = 0x80
+OPCODE_MASK = 0x0f
+MASK_MASK = 0x80
+LENGTH_MASK = 0x7f
+
+# rsv mask
+RSV0_MASK = 0x40
+RSV1_MASK = 0x20
+RSV2_MASK = 0x10
+
+# flag mask
+HEADER_FLAG_MASK = RSV0_MASK | RSV1_MASK | RSV2_MASK
